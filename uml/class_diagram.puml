@@ -1,0 +1,144 @@
+@startuml Group3_TrafficViolationSystem
+title CPE 310 — Group 3: Automated Traffic Violation Detection and Fine Management System
+
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+hide circle
+
+abstract class Vehicle {
+  # _plate_number: str
+  # _make: str
+  # _model: str
+  # _year: int
+  + plate_number: str <<property>>
+  + {abstract} vehicle_class: str
+  + {abstract} annual_road_tax(): float
+}
+
+class Car {
+  - _engine_capacity_cc: int
+  + vehicle_class: str
+  + annual_road_tax(): float
+}
+
+class Motorcycle {
+  - _engine_capacity_cc: int
+  + vehicle_class: str
+  + annual_road_tax(): float
+}
+
+class Truck {
+  - _max_load_tonnes: float
+  + vehicle_class: str
+  + annual_road_tax(): float
+}
+
+class BusRapidTransit {
+  - _seating_capacity: int
+  - _route_code: str
+  + vehicle_class: str
+  + annual_road_tax(): float
+}
+
+Vehicle <|-- Car
+Vehicle <|-- Motorcycle
+Vehicle <|-- Truck
+Vehicle <|-- BusRapidTransit
+
+class Driver {
+  - _licence_no: str
+  - _full_name: str
+  - __demerit_points: int
+  + is_suspended: bool <<property>>
+  + accumulate_points(n: int): void
+  + reinstate(): void
+}
+
+interface Enforceable <<interface>> {
+  + {abstract} record_violation(driver, vehicle, offence_code): ViolationRecord
+}
+
+class EnforcementOfficer {
+  - _badge_no: str
+  - _name: str
+  - _zone: str
+  + record_violation(...): ViolationRecord
+  + __add__(other): list
+}
+
+class AutomaticCamera {
+  - _camera_id: str
+  - _location: str
+  - _speed_limit_kmh: float
+  + classify_speed(speed): str
+  + detect_and_record(...): ViolationRecord
+  + record_violation(...): ViolationRecord
+}
+
+Enforceable <|.. EnforcementOfficer
+Enforceable <|.. AutomaticCamera
+
+class PenaltySchedule {
+  - _offences: dict
+  + from_dict(config: dict) <<classmethod>>
+  + lookup(code: str): Offence
+}
+
+class ViolationRecord {
+  - _violation_id: str
+  - _offence_code: str
+  - _fine_ngn: float
+  - _demerit_pts: int
+  - _timestamp: datetime
+  - _paid: bool
+  + mark_paid(): void
+  + __eq__(other)
+  + __lt__(other)
+  + __hash__()
+}
+
+class PaymentRecord {
+  - _amount_paid_ngn: float
+  - _channel: PaymentChannel
+  - _payment_date: datetime
+  + __str__(): str
+  + __repr__(): str
+}
+
+class ViolationDashboard {
+  - _violations: list
+  - _payments: list
+  - _drivers: dict
+  - _officers: dict
+  - _cameras: dict
+  + record_payment(...): PaymentRecord
+  + top_offences(n): list
+  + dashboard_report(): str
+}
+
+abstract class TrafficSystemError {
+  + detail: str
+  + timestamp: datetime
+}
+class ViolationError
+class PaymentError
+class RegistrationError
+TrafficSystemError <|-- ViolationError
+TrafficSystemError <|-- PaymentError
+TrafficSystemError <|-- RegistrationError
+
+' ── Relationships ──────────────────────────────────────────────────────
+ViolationDashboard "1" *-- "0..*" ViolationRecord : logs >
+ViolationDashboard "1" o-- "0..*" Driver : registers >
+ViolationDashboard "1" o-- "0..*" EnforcementOfficer : registers >
+ViolationDashboard "1" o-- "0..*" AutomaticCamera : registers >
+
+Driver "1" -- "1..*" ViolationRecord : commits >
+Car "1" -- "1..*" ViolationRecord : involved in >
+ViolationRecord "1" -- "0..1" PaymentRecord : settled by >
+
+EnforcementOfficer ..> PenaltySchedule : uses
+AutomaticCamera ..> PenaltySchedule : uses
+PenaltySchedule ..> ViolationRecord : supplies fine/demerit data
+
+@enduml
