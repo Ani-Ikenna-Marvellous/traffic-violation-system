@@ -22,24 +22,18 @@ command-line application — no GUI or database is required by the brief.
 
 | # | Full Name | Matric Number | GitHub Username |
 |---|---|---|---|
-| 1 | Ani Ikenna Marvellous (Group Leader) | CPE/2023/1030 | _add GitHub username_ |
-| 2 | Anjoorin Israel Ayomide | CPE/2023/1031 | _add GitHub username_ |
-| 3 | Anugwara Chiedoziem Chinonyerem | CPE/2023/1032 | _add GitHub username_ |
-| 4 | Aremu Oluwatomisin Ademide | CPE/2023/1033 | _add GitHub username_ |
-| 5 | Ariyo Samuel Olamilekan | CPE/2023/1034 | _add GitHub username_ |
-| 6 | Ayejusunle Peculiar Toluwalope | CPE/2023/1035 | _add GitHub username_ |
-| 7 | Ayodeji Toyosi Stephen | CPE/2023/1036 | _add GitHub username_ |
-| 8 | Babatunde Ebenezer Oluwagbenga | CPE/2023/1037 | _add GitHub username_ |
-| 9 | Bamisile Oluwadarasimi Samuel | CPE/2023/1038 | _add GitHub username_ |
-| 10 | Banye Samuel Chukwuebuka | CPE/2023/1039 | _add GitHub username_ |
-| 11 | Boluwade Olamiposi David | CPE/2023/1040 | _add GitHub username_ |
-| 12 | Charles Princesuccess Ekom | CPE/2023/1041 | _add GitHub username_ |
-| 13 | Daniel Effiong Joseph | CPE/2023/1042 | _add GitHub username_ |
-| 14 | Oguntuase Ibukunoluwa Emmanuel | CPE/2021/1043 | _add GitHub username_ |
+| 1 | Ani Ikenna Marvellous (Group Leader) | CPE/2023/1030 | _@Ani-IKENNA-MARVELLOUS_ |
+| 2 | Anugwara Chiedoziem Chinonyerem | CPE/2023/1032 | _@MA-RK987_ |
+| 3 | Aremu Oluwatomisin Ademide | CPE/2023/1033 | _@aremutomisin25-netizen_ |
+| 4 | Ariyo Samuel Olamilekan | CPE/2023/1034 | @Ariyo001-maker_ |
+| 5 | Babatunde Ebenezer Oluwagbenga | CPE/2023/1037 | _@Jerrybabs9336_ |
+| 6 | Bamisile Oluwadarasimi Samuel | CPE/2023/1038 | _@nova1357_ |
+| 7 | Banye Samuel Chukwuebuka | CPE/2023/1039 | _@sammyjay10py_ |
+| 8 | Boluwade Olamiposi David | CPE/2023/1040 | _@boluwadedavid858-eng_ |
+| 9 | Charles Princesuccess Ekom | CPE/2023/1041 | _@chalsprince01_ |
+| 10 | Daniel Effiong Joseph | CPE/2023/1042 | _@danieleffiong059-wq_ |
+| 11 | Oguntuase Ibukunoluwa Emmanuel | CPE/2021/1043 | _@Beetuyou_ |
 
-> The brief's rubric asks for a GitHub username per member alongside name and matric
-> number — fill those in once everyone has a GitHub account, or leave as-is if your
-> lecturer only needs names and matric numbers.
 
 ## 3. OOP Concepts Demonstrated
 
