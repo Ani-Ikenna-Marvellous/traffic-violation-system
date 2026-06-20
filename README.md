@@ -33,6 +33,7 @@ command-line application — no GUI or database is required by the brief.
 | 9 | Charles Princesuccess Ekom | CPE/2023/1041 | _@chalsprince01_ |
 | 10 | Daniel Effiong Joseph | CPE/2023/1042 | _@danieleffiong059-wq_ |
 | 11 | Oguntuase Ibukunoluwa Emmanuel | CPE/2021/1043 | _@Beetuyou_ |
+| 12 | Anjoorin israel ayomide | CPE/2021/1031 | _@ayomideisrael449-cell_ |
 
 
 ## 3. OOP Concepts Demonstrated
